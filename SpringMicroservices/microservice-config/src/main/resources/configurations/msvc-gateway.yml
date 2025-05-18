@@ -4,7 +4,7 @@ eureka:
 
 server:
   port: 8080
-  
+
 spring:
   application:
     name: msvc-gateway
@@ -12,7 +12,7 @@ spring:
     gateway:
       discovery:
         locator:
-        enabled: true
+          enabled: true
       routes:
         - id: studentes
           uri: http://localhost:8090
@@ -22,4 +22,4 @@ spring:
           uri: http://localhost:9090
           predicates:
             - Path=/api/course/**
-
+            
