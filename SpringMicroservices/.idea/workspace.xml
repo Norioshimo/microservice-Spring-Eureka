@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5405e404-48a2-4a78-bc95-f425634e3d16" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/microservice-mailsend/src/main/java/nsg/portafolio/microservices/mailsend/config/EnvConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microservice-mailsend/src/main/resources/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-config/src/main/resources/configurations/msvc-gateway.yml" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-config/src/main/resources/configurations/msvc-gateway.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-course/src/main/java/nsg/portafolio/microservices/course/MicroserviceCourseApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-course/src/main/java/nsg/portafolio/microservices/course/MicroserviceCourseApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="2yNgcQepFT75qddhZlY96HE0KxE" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main"
+  }
+}]]></component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5405e404-48a2-4a78-bc95-f425634e3d16" name="Changes" comment="" />
+      <created>1749680524862</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1749680524862</updated>
+    </task>
+    <servers />
+  </component>
+</project>
