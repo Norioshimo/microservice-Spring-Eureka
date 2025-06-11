@@ -36,4 +36,6 @@ build/
 ### Archivo de ambiente
 .env
 
-/mail/resources/files
+# Ignorar archivos PDF en esta carpeta
+src/mail/resources/files/*
+
