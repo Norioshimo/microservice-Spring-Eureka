@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5405e404-48a2-4a78-bc95-f425634e3d16" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/microservice-mailsend/src/main/java/nsg/portafolio/microservices/mailsend/config/EnvConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservice-mailsend/src/main/resources/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-config/src/main/resources/configurations/msvc-gateway.yml" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-config/src/main/resources/configurations/msvc-gateway.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-course/src/main/java/nsg/portafolio/microservices/course/MicroserviceCourseApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-course/src/main/java/nsg/portafolio/microservices/course/MicroserviceCourseApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-    </list>
+    <list default="true" id="5405e404-48a2-4a78-bc95-f425634e3d16" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,7 +36,8 @@
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main"
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/Acer/Proyectos/Java/microservice-Spring-Eureka/SpringMicroservices/microservice-mailsend/src/main/resources"
   }
 }]]></component>
   <component name="TaskManager">
