@@ -60,6 +60,10 @@ Orden de ejecución de los servicios
 
 Recomendaciones
 ---------------
+Tener en cuenta que el archivo .env.tmp son variable de entorno. Renombrar el archivo a .env y completar los dato.
+
+Recomendaciones
+---------------
 - Asegúrate de que todos los microservicios estén configurados para registrarse en Eureka.
 - Verifica que los archivos application.yml o bootstrap.yml tengan correctamente definidas 
   las propiedades del servidor de configuración y Eureka.
