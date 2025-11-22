@@ -1,0 +1,45 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: inventario-service
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    datasource:
+      url: jdbc:mysql://localhost:3306/inventario_service
+      username: root
+      password:
+    jpa:
+      hibernate:
+        ddl-auto: create-drop
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+  zipkin:
+    tracing:
+      endpoint: http://localhost:9411/api/v2/spans
+  prometheus:
+    metrics:
+      export:
+        enabled: true
+  metrics:
+    enable-exemplars: false
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus
+
+
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      #defaultZone: http://localhost:8761/eureka
+      defaultZone: http://eurekaadm:123@localhost:8761/eureka

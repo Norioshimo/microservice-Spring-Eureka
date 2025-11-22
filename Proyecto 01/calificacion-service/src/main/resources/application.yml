@@ -1,0 +1,13 @@
+server:
+  port: 8083
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017
+      database: db_microservicios
+  application:
+    name: calificacion-service
+  config:
+    enabled: false
+    import: optional:configserver:instead

@@ -1,0 +1,43 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: producto-service
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/producto-service
+  zipkin:
+    base-url: http://localhost:9411
+  sleuth:
+    sampler:
+      probability: 1.0
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+  prometheus:
+    metrics:
+      export:
+        enabled: true
+  metrics:
+    enable-exemplars: false
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://eurekaadm:123@localhost:8761/eureka/
+
+logging:
+  level:
+    io.micrometer.tracing: DEBUG
+    org.springframework.web: DEBUG

@@ -1,0 +1,26 @@
+package com.msvc.inventario.model;
+
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Entity
+@Table(name = "inventario")
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+public class Inventario {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(name = "codigo_sku")
+    private String codigoSku;
+
+    private Integer cantidad;
+
+}
