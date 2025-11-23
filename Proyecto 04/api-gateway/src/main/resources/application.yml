@@ -1,0 +1,77 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: api-gateway
+
+  cloud:
+    gateway:
+      # Configuración global de CORS
+      server:
+        webflux:
+          globalcors:
+            cors-configurations:
+              '[/**]':
+                allowed-origins:
+                  - "http://localhost:4200"
+                  - "http://localhost:80"
+                  - "http://localhost"
+                allowed-methods:
+                  - GET
+                  - POST
+                  - PUT
+                  - DELETE
+                allowed-headers:
+                  - "*"
+                allow-credentials: true
+
+          # Rutas del Gateway
+          routes:
+            - id: products-service
+              uri: lb://products-service
+              predicates:
+                - Path=/api/product/**
+              filters:
+                - StripPrefix=2  # Quita los primeros 2 segmentos del path (/api/product)
+                - name: SampleCookie # Se usa para filtro personalizado
+                  args:
+                    message: Hola mi mensaje personalizado para productos!
+                    name: user-filtro-personalizado
+                    value: Norio
+
+
+
+            - id: items-service
+              uri: lb://items-service
+              predicates:
+                - Path=/api/item/**
+              filters:
+                - StripPrefix=2 # Quita los primeros 2 segmentos del path (/api/item)
+
+            - id: discovery-service
+              uri: http://localhost:8761
+              predicates:
+                - Path=/eureka/web
+              filters:
+                - SetPath=/
+
+            - id: discovery-service-static
+              uri: http://localhost:8761
+              predicates:
+                - Path=/eureka/**
+
+# Configuración de logs
+logging:
+  level:
+    io.micrometer.tracing: DEBUG
+    org.springframework.cloud.gateway: DEBUG
+    org.springframework.web: DEBUG
+
+# Configuracion de eureka
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
