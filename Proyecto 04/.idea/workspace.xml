@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="cf8ffdc5-419d-44ac-bfa4-cbf43ba95531" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/products-services/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/products-services/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/products-services/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/products-services/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/products-services/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/products-services/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/products-services/src/main/java/com/ms/products/ProductsServicesApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/products-services/src/main/java/com/ms/products/controllers/ProductoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/products-services/src/main/java/com/ms/products/entities/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/products-services/src/main/java/com/ms/products/repositories/ProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/products-services/src/main/java/com/ms/products/services/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/products-services/src/main/java/com/ms/products/services/ProductServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/products-services/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/products-services/src/main/resources/banner.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/insert.sql" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="35r5mIPiZZArkHj4dfSAVktrLLf" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "proyecto4",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Acer\Proyectos\Java\microservice-Spring-Eureka\Proyecto 04\products-services\src\main\java\com\ms\products" />
+    </key>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cf8ffdc5-419d-44ac-bfa4-cbf43ba95531" name="Changes" comment="" />
+      <created>1763855508593</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1763855508593</updated>
+    </task>
+    <servers />
+  </component>
+</project>
