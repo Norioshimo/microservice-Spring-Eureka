@@ -21,6 +21,7 @@
     <modules>
         <module>products-services</module>
         <module>items-service</module>
+        <module>discovery-service</module>
     </modules>
 
     <dependencies>

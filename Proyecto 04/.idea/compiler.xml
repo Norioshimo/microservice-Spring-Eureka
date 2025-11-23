@@ -14,17 +14,21 @@
         <processorPath useClasspath="false">
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.42/lombok-1.18.42.jar" />
         </processorPath>
+        <module name="discovery-service" />
         <module name="items-service" />
         <module name="products-services" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="discovery-server" target="17" />
       <module name="Proyecto 04 (1)" target="1.5" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Proyecto 04" options="-parameters" />
+      <module name="discovery-server" options="-parameters" />
+      <module name="discovery-service" options="-parameters" />
       <module name="items-service" options="-parameters" />
       <module name="products-services" options="-parameters" />
     </option>

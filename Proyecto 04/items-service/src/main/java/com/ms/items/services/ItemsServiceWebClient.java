@@ -2,6 +2,7 @@ package com.ms.items.services;
 
 import com.ms.items.models.Item;
 import com.ms.items.models.Product;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
 import org.springframework.http.MediaType;
@@ -12,6 +13,7 @@ import java.util.*;
 
 @Primary
 @Service
+@Slf4j
 public class ItemsServiceWebClient implements ItemService {
 
     @Autowired
@@ -19,6 +21,7 @@ public class ItemsServiceWebClient implements ItemService {
 
     @Override
     public List<Item> findAll() {
+        log.info("Consumido por ItemsServiceWebClient");
         return webClient.build().get()
                 .retrieve()
                 .bodyToFlux(Product.class)

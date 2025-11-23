@@ -22,6 +22,7 @@ public class ItemServiceFeign implements ItemService {
 
     @Override
     public List<Item> findAll() {
+        log.info("Consumido por ItemServiceFeign");
         return this.productFeignClient.findAll().stream().map(product -> {
             Random random = new Random();
             return new Item(product, random.nextInt(10) + 1);
