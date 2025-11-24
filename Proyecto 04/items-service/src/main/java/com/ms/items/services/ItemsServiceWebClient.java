@@ -37,18 +37,18 @@ public class ItemsServiceWebClient implements ItemService {
     public Optional<Item> findById(Long id) {
         Map<String, Long> params = new HashMap<>();
         params.put("id", id);
-        try{
-            return Optional.ofNullable(webClient.build().get().uri("/{id}", params)
-                    .accept(MediaType.APPLICATION_JSON)
-                    .retrieve()
-                    .bodyToMono(Product.class)
-                    .map(product -> {
-                        Random random = new Random();
-                        return new Item(product, random.nextInt(10) + 1);
-                    })
-                    .block());
-        } catch (Exception e) {
-            return Optional.empty();
-        }
+        //try{
+        return Optional.ofNullable(webClient.build().get().uri("/{id}", params)
+                .accept(MediaType.APPLICATION_JSON)
+                .retrieve()
+                .bodyToMono(Product.class)
+                .map(product -> {
+                    Random random = new Random();
+                    return new Item(product, random.nextInt(10) + 1);
+                })
+                .block());
+        //} catch (Exception e) {
+        //   return Optional.empty();
+        //}
     }
 }

@@ -32,12 +32,12 @@ public class ItemServiceFeign implements ItemService {
 
     @Override
     public Optional<Item> findById(Long id) {
-        try {
-            Product product = this.productFeignClient.details(id);
-            return Optional.of(new Item(this.productFeignClient.details(id), new Random().nextInt(10) + 1));
-        } catch (Exception e) {
-            return Optional.empty();
-        }
+        //try {
+        Product product = this.productFeignClient.details(id);
+        return Optional.of(new Item(this.productFeignClient.details(id), new Random().nextInt(10) + 1));
+        //} catch (Exception e) {
+        //    return Optional.empty();
+        // }
 
     }
 }

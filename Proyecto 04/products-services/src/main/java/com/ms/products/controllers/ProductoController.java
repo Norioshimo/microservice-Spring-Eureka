@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.concurrent.TimeUnit;
 
 @RestController
 @RequestMapping
@@ -24,7 +25,15 @@ public class ProductoController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Product> details(@PathVariable Long id) {
+    public ResponseEntity<Product> details(@PathVariable Long id) throws InterruptedException {
+
+        if(id.equals(10L)){// Simulación de error...
+            throw new IllegalStateException("Producto no encontrado;");
+        }
+
+        if(id.equals(7L)){// Simulación de error...
+            TimeUnit.SECONDS.sleep(5l);
+        }
 
         Optional<Product> producto = this.productService.findById(id);
         if (producto.isPresent()) {
