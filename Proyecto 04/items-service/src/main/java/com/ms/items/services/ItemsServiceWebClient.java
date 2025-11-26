@@ -11,7 +11,6 @@ import org.springframework.web.reactive.function.client.WebClient;
 
 import java.util.*;
 
-@Primary
 @Service
 @Slf4j
 public class ItemsServiceWebClient implements ItemService {
@@ -50,5 +49,43 @@ public class ItemsServiceWebClient implements ItemService {
         //} catch (Exception e) {
         //   return Optional.empty();
         //}
+    }
+
+    @Override
+    public Product save(Product product) {
+        return webClient.build()
+                .post()
+                .contentType(MediaType.APPLICATION_JSON)
+                .bodyValue(product)
+                .retrieve()
+                .bodyToMono(Product.class)
+                .block();
+    }
+
+    @Override
+    public Product update(Product product, Long id) {
+        Map<String, Long> params = new HashMap<>();
+        params.put("id", id);
+        return webClient.build()
+                .put()
+                .uri("/{id}", params)
+                .accept(MediaType.APPLICATION_JSON)
+                .contentType(MediaType.APPLICATION_JSON)
+                .bodyValue(product)
+                .retrieve()
+                .bodyToMono(Product.class)
+                .block();
+    }
+
+    @Override
+    public void deleteById(Long id) {
+        Map<String, Long> params = new HashMap<>();
+        params.put("id", id);
+        webClient.build()
+                .delete()
+                .uri("/{id}", params)
+                .retrieve()
+                .bodyToMono(Void.class)
+                .block();
     }
 }

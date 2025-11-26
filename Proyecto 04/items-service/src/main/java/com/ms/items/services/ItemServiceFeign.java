@@ -13,6 +13,7 @@ import java.util.Optional;
 import java.util.Random;
 import java.util.stream.Collectors;
 
+@Primary
 @Service
 @Slf4j
 public class ItemServiceFeign implements ItemService {
@@ -39,5 +40,20 @@ public class ItemServiceFeign implements ItemService {
         //    return Optional.empty();
         // }
 
+    }
+
+    @Override
+    public Product save(Product product) {
+        return this.productFeignClient.create(product);
+    }
+
+    @Override
+    public Product update(Product product,Long id) {
+        return this.productFeignClient.update(product,id);
+    }
+
+    @Override
+    public void deleteById(Long id) {
+        this.productFeignClient.delete(id);
     }
 }
