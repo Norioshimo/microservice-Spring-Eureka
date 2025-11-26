@@ -3,22 +3,20 @@ package com.ms.items.controllers;
 import com.ms.items.models.Item;
 import com.ms.items.models.Product;
 import com.ms.items.services.ItemService;
-import com.netflix.discovery.converters.Auto;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import io.github.resilience4j.timelimiter.annotation.TimeLimiter;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.circuitbreaker.CircuitBreakerFactory;
+import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
-
 import java.time.LocalDate;
-import java.util.Collections;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.concurrent.CompletableFuture;
 
 @RestController
@@ -30,6 +28,28 @@ public class ItemController {
     @Autowired
     private CircuitBreakerFactory circuitBreakerFactory;
 
+    @Value("${configuracion.texto}")
+    private String text;
+
+    @Autowired
+    private Environment env;
+
+
+    @GetMapping("/fetch-configs")
+    public ResponseEntity<?> fetchConfigs(@Value("${server.port}") String port) {
+        Map<String, String> json = new HashMap<>();
+        json.put("text", text);
+        json.put("port", port);
+        log.info("text: " + text);
+        log.info("port: " + port);
+
+        if (env.getActiveProfiles().length > 0 && env.getActiveProfiles()[0].equals("dev")) {
+            json.put("autor.nombre", env.getProperty("configuracion.autor.nombre"));
+            json.put("autor.email", env.getProperty("configuracion.autor.email"));
+        }
+
+        return ResponseEntity.ok(json);
+    }
 
     @GetMapping()
     public List<Item> list() {
@@ -113,7 +133,7 @@ public class ItemController {
     }
 
     @GetMapping("/forward-message")
-    public ResponseEntity<?>forwardMessage(){
+    public ResponseEntity<?> forwardMessage() {
         return ResponseEntity.status(HttpStatus.OK).body("Error y se hizo forward");
 
     }

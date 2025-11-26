@@ -1,9 +1,11 @@
-server:
-  port: 8080
 
 spring:
   application:
     name: api-gateway
+  config:
+    import: "optional:configserver:http://localhost:8888" # Buscar en el servidor de configuración
+  profiles:
+    active: default
 
   cloud:
     gateway:
@@ -66,20 +68,7 @@ spring:
               predicates:
                 - Path=/eureka/**
 
-# Configuración de logs
-logging:
-  level:
-    io.micrometer.tracing: DEBUG
-    org.springframework.cloud.gateway: DEBUG
-    org.springframework.web: DEBUG
 
-# Configuracion de eureka
-eureka:
-  client:
-    fetch-registry: true
-    register-with-eureka: true
-    service-url:
-      defaultZone: http://localhost:8761/eureka
 
 resilience4j:
   circuitbreaker:

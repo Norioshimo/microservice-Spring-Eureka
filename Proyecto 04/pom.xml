@@ -19,10 +19,11 @@
    <packaging>pom</packaging>
 
     <modules>
-        <module>products-services</module>
-        <module>items-service</module>
+        <module>config-service</module>
         <module>discovery-service</module>
         <module>api-gateway</module>
+        <module>products-services</module>
+        <module>items-service</module>
     </modules>
 
     <dependencies>
@@ -31,6 +32,13 @@
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
+
+        <dependency>
+            <groupId>io.github.cdimascio</groupId>
+            <artifactId>java-dotenv</artifactId>
+            <version>5.2.2</version>
+        </dependency>
+
     </dependencies>
 
 
